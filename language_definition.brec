@@ -9,8 +9,9 @@ Definition of the language Waybrec
     ━━━━━━
      Node
     ──────
+        : see @ http://reluk.ca/project/Breccia/language_definition.brec
         typology
-            / The types marked on the right are introduced by Waybrec.
+            / Types marked on the right side are introduced by Waybrec.
             • document node
             ◇ body node
                 • division
@@ -20,7 +21,7 @@ Definition of the language Waybrec
                             ◇ associative reference
                                 • jointer
                                 • pointer
-                            • null command point
+                            • null command
                             ◇ patch               · · · · · · ◇
                                 • deletion patch    · · · · · · •
                                 • replacement patch     · · · · •
@@ -43,41 +44,52 @@ Definition of the language Waybrec
      Patch
     ───────
         / A command point.
-        - Here is a sketch of a definition organized typologically.
+        - It alters the way model at a given node.
+        - Following is the sketch of a definition.
             redact+
-        ◇ patch
-            - Alters the way model at a given node.
-            • deletion patch
-                - `: delete …`
-                - deletes the referent node
+
+        deletion patch
+            - `: delete …`
+            - deletes the referent node
+            - First term: mandatory.
+
+        replacement patch
+            - `: replace …`
+            - replaces the referent node
+            - first term
+                - defaults (like elsewhere, mutatis mutandis)
+                  to a pattern based on the head of the first child of the patch
+                    - so the referent head would be unchanged,
+                      or changed only trivially as the pattern formation allows
+
+
+        ───────────────────────
+         child insertion patch
+        ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+            - A principal use case: ease of engagement declaration in recasts.
+
+            prependage patch
+                - `: prepend @ …`
+                - Adds its children as the first children of the referent node.
                 - First term: mandatory.
-            • replacement patch
-                - `: replace …`
-                - replaces the referent node
-                - first term
-                    - defaults (like elsewhere, mutatis mutandis)
-                      to a pattern based on the head of the first child of the patch
-                        - so the referent head would be unchanged,
-                          or changed only trivially as the pattern formation allows
-            ◇ child insertion patch
-                - A principal use case: ease of engagement declaration in recasts.
-                • prependage patch
-                    - `: prepend @ …`
-                    - Adds its children as the first children of the referent node.
-                    - First term: mandatory.
-                • appendage patch
-                    - `: append @ …`
-                    - Adds its children as the last children of the referent node.
-                    - First term: mandatory.
-            ◇ sibling insertion patch
-                • precession patch
-                    - `: precede …`
-                    - inserts its children as siblings directly before the referent node
-                    - First term: mandatory.
-                • succession patch
-                    - `: succeed …`
-                    - appends its children as siblings directly after the referent node
-                    - First term: mandatory.
+
+            appendage patch
+                - `: append @ …`
+                - Adds its children as the last children of the referent node.
+                - First term: mandatory.
+
+
+        ─────────────────────────
+         sibling insertion patch
+        ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+            precession patch
+                - `: precede …`
+                - inserts its children as siblings directly before the referent node
+                - First term: mandatory.
+            succession patch
+                - `: succeed …`
+                - appends its children as siblings directly after the referent node
+                - First term: mandatory.
 
 
 
