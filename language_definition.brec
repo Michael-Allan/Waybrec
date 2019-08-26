@@ -31,6 +31,7 @@ Definition of the language Waybrec
                                 ◇ sibling insertion patch     ◇
                                     • precession patch      · · •
                                     • succession patch    · · · •
+                            • wayhead designator        · · · · •
                     ◇ material point
                         ◇ specialized material point
                             • aside point
@@ -90,6 +91,19 @@ Definition of the language Waybrec
                 - `: succeed …`
                 - appends its children as siblings directly after the referent node
                 - First term: mandatory.
+
+
+
+    ━━━━━━━━━━━━━━━━━━━━
+     Wayhead designator
+    ────────────────────
+        / A command point.
+        - It marks its parent as a wayhead node.
+        - Its descriptor has this form:
+
+               ─── wayhead ────▶
+
+            figure, The form of the descriptor of a Wayhead designator.
 
 
 
