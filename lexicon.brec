@@ -1,0 +1,18 @@
+Definition of terms for project wayic.recast
+
+    off-way
+        ─ adjective and adverb
+            - Not on-way.
+    on-way
+        ─ adjective and adverb
+            - Being part of a way.
+            - Belonging to a wayhead node and thereby representing part of a way.
+    wayhead
+        ─ noun
+            - The head of a wayhead node, representing the goal or part of the goal.
+    wayhead node
+        ─ noun
+            - A node that represents the way, or part of the way, through to the goal.
+
+
+                                        \ Copyright © 2019, Michael Allan and contributors.  Licence MIT.
