@@ -1,4 +1,4 @@
-Definition of terms for project wayic.recast
+Definition of terms for project wayic.Waybrec
 
     off-way
         ─ adjective and adverb
@@ -7,6 +7,14 @@ Definition of terms for project wayic.recast
         ─ adjective and adverb
             - Being part of a way.
             - Belonging to a wayhead node and thereby representing part of a way.
+    Waybrec
+        ─ mass noun
+            - A lightweight markup language, an extension of Breccia specialized for the purpose
+              of way modelling.
+                : see `lightweight markup.+extension of Breccia.+way model` @ README.html
+    Waybreccian
+        ─ adjective
+            - Relating to Waybrec.
     wayhead
         ─ noun
             - The head of a wayhead node, representing the goal or part of the goal.
