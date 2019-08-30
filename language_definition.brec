@@ -5,13 +5,23 @@ Definition of the language Waybrec
         : see `introduced by Waybrec` @ `^^typology$` @ `^^ Node$`
 
 
+    ━━━━━━━━━━━━━━━
+     Command point
+    ───────────────
+        : see @ http://reluk.ca/project/Breccia/language_definition.brec
+        - No formal referent of a command point is located in the way model,
+          except where documented in the language definition.
+            / While the effect of a patch is located in the way model, for instance,
+              the node it refers to (via its node indicator) is located in waysource.
+
+
 
     ━━━━━━
      Node
     ──────
         : see @ http://reluk.ca/project/Breccia/language_definition.brec
         typology
-            / Types marked on the right side are introduced by Waybrec.
+            / Types marked on the right side are the new types introduced by Waybrec.
             • document node
             ◇ body node
                 • division
@@ -46,17 +56,18 @@ Definition of the language Waybrec
     ───────
         / A command point.
         - It alters the way model at a given node.
+            / The way model, not the waysource from which it was compiled.
         - Following is the sketch of a definition.
             redact+
 
         deletion patch
             - `: delete …`
-            - deletes the referent node
+            - deletes the referent node from the way model
             - First term: mandatory.
 
         replacement patch
             - `: replace …`
-            - replaces the referent node
+            - replaces the referent node in the way model
             - first term
                 - defaults (like elsewhere, mutatis mutandis)
                   to a pattern based on the head of the first child of the patch
@@ -71,12 +82,12 @@ Definition of the language Waybrec
 
             prependage patch
                 - `: prepend @ …`
-                - Adds its children as the first children of the referent node.
+                - Adds its children (to the way model) as the first children of the referent node.
                 - First term: mandatory.
 
             appendage patch
                 - `: append @ …`
-                - Adds its children as the last children of the referent node.
+                - Adds its children (to the way model) as the last children of the referent node.
                 - First term: mandatory.
 
 
@@ -85,11 +96,11 @@ Definition of the language Waybrec
         ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
             precession patch
                 - `: precede …`
-                - inserts its children as siblings directly before the referent node
+                - inserts its children (to the way model) as siblings directly before the referent node
                 - First term: mandatory.
             succession patch
                 - `: succeed …`
-                - appends its children as siblings directly after the referent node
+                - appends its children (to the way model) as siblings directly after the referent node
                 - First term: mandatory.
 
 
