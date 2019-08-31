@@ -11,6 +11,7 @@ Definition of the language Waybrec
         : see @ http://reluk.ca/project/Breccia/language_definition.brec
         - No formal referent of a command point is located in the way model,
           except where documented in the language definition.
+            / Nothing in the present definition does so.
             / While the effect of a patch is located in the way model, for instance,
               the node it refers to (via its node indicator) is located in waysource.
 
