@@ -2,7 +2,7 @@ Definition of the language Waybrec
 
     - Waybrec extends Breccia.
     - This document defines the extensions.
-        : see `introduced by Waybrec` @ `^^typology$` @ `^^ Node$`
+        : see `introduced by Waybrec` @ `^^typology$` @ `^^ Fractum$`
 
 
     ━━━━━━━━━━━━━━━
@@ -13,18 +13,18 @@ Definition of the language Waybrec
           except where documented in the language definition.
             / Nothing in the present definition does so.
             / While the effect of a patch is located in the way model, for instance,
-              the node it refers to (via its node indicator) is located in waysource.
+              the fractum it refers to (via its fractum indicator) is located in waysource.
 
 
 
     ━━━━━━
-     Node
+     Fractum
     ──────
         : see @ http://reluk.ca/project/Breccia/language_definition.brec
         typology
             / Types marked on the right side are the new types introduced by Waybrec.
-            • document node
-            ◇ body node
+            • document fractum
+            ◇ body fractum
                 • division
                 ◇ point
                     ◇ formal point
@@ -42,7 +42,7 @@ Definition of the language Waybrec
                                 ◇ sibling insertion patch     ◇
                                     • precession patch      · · •
                                     • succession patch    · · · •
-                            • wayhead designator        · · · · •
+                            • thoroughbrec designator   · · · · •
                     ◇ material point
                         ◇ specialized material point
                             • aside point
@@ -56,19 +56,19 @@ Definition of the language Waybrec
      Patch
     ───────
         / A command point.
-        - It alters the way model at a given node.
+        - It alters the way model at a given fractum.
             / The way model, not the waysource from which it was compiled.
         - Following is the sketch of a definition.
             redact+
 
         deletion patch
             - `: delete …`
-            - deletes the referent node from the way model
+            - deletes the referent fractum from the way model
             - First term: mandatory.
 
         replacement patch
             - `: replace …`
-            - replaces the referent node in the way model
+            - replaces the referent fractum in the way model
             - first term
                 - defaults (like elsewhere, mutatis mutandis)
                   to a pattern based on the head of the first child of the patch
@@ -83,12 +83,12 @@ Definition of the language Waybrec
 
             prependage patch
                 - `: prepend @ …`
-                - Adds its children (to the way model) as the first children of the referent node.
+                - Adds its children (to the way model) as the first children of the referent fractum.
                 - First term: mandatory.
 
             appendage patch
                 - `: append @ …`
-                - Adds its children (to the way model) as the last children of the referent node.
+                - Adds its children (to the way model) as the last children of the referent fractum.
                 - First term: mandatory.
 
 
@@ -97,25 +97,25 @@ Definition of the language Waybrec
         ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
             precession patch
                 - `: precede …`
-                - inserts its children (to the way model) as siblings directly before the referent node
+                - inserts its children (to the way model) as siblings directly before the referent fractum
                 - First term: mandatory.
             succession patch
                 - `: succeed …`
-                - appends its children (to the way model) as siblings directly after the referent node
+                - appends its children (to the way model) as siblings directly after the referent fractum
                 - First term: mandatory.
 
 
 
-    ━━━━━━━━━━━━━━━━━━━━
-     Wayhead designator
-    ────────────────────
+    ━━━━━━━━━━━━━━━━━━━━━━━━━
+     Thoroughbrec designator
+    ─────────────────────────
         / A command point.
-        - It marks its parent as a wayhead node.
+        - It marks its parent as a thoroughbrec.
         - Its descriptor has this form:
 
-               ─── wayhead ────▶
+               ───╴‘thoroughbrec’╶────▶
 
-            figure, The form of the descriptor of a Wayhead designator.
+            figure, The form of the descriptor in a thoroughbrec designator.
 
 
 

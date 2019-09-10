@@ -6,7 +6,11 @@ Definition of terms for project Waybrec
     on-way
         ─ adjective and adverb
             - Being part of a way.
-            - Belonging to a wayhead node and thereby representing part of a way.
+            - Belonging to a thoroughbrec and thereby modelling part of a way.
+    thoroughbrec
+        ─ noun
+            - A wayfractum that models a way completely through to the endmost goal,
+              its head representing the goal and its body the means.
     Waybrec
         ─ mass noun
             - A lightweight markup language, an extension of Breccia specialized for the purpose
@@ -15,12 +19,16 @@ Definition of terms for project Waybrec
     Waybreccian
         ─ adjective
             - Relating to Waybrec.
-    wayhead
+    wayfracta
+        ─ plural noun
+            : see `^^─ noun$` @ `^^wayfractum$`
+    wayfractal
+        ─ adjective
+            - Relating to wayfracta.
+    wayfractum
         ─ noun
-            - The head of a wayhead node, representing the goal or part of the goal.
-    wayhead node
-        ─ noun
-            - A node that represents the way, or part of the way, through to the goal.
+            - A fractum in waysource.
+            : see `^^─ plural noun$` @ `^^wayfracta$`
 
 
                                         \ Copyright © 2019, Michael Allan and contributors.  Licence MIT.
