@@ -2,7 +2,8 @@ Definition of the language Waybrec
 
     - Waybrec extends Breccia.
     - This document defines the extensions.
-        : see `introduced by Waybrec` @ `^^typology$` @ `^^ Fractum$`
+        : re `extensions` see `^^redefined fracta$` @ `^^ Fractum$`
+        : re `extensions` see     `^^novel fracta$` @ `^^ Fractum$`
 
 
     ━━━━━━━━━━━━━━━
@@ -21,34 +22,37 @@ Definition of the language Waybrec
      Fractum
     ─────────
         : see @ http://reluk.ca/project/Breccia/language_definition.brec
-        typology
-            / Types marked on the right side are the new types introduced by Waybrec.
-            • document fractum
-            ◇ body fractum
-                • division
-                ◇ point
-                    ◇ formal point
+        redefined fracta
+            - Preexisting fractal types whose definitions are changed by Waybrec.
+                : re `fractal types` see `^^typology$` @ `^^ Fractum$`
+                  @ http://reluk.ca/project/Breccia/language_definition.brec
+                /
+
+            ◇ body fractum
+                ◇ point
+                    ◇ formal point
                         ◇ command point
-                            ◇ associative reference
-                                • jointer
-                                • pointer
-                            • null command
-                            ◇ patch               · · · · · · ◇
-                                • deletion patch    · · · · · · •
-                                • replacement patch     · · · · •
-                                ◇ child insertion patch   · · ◇
-                                    • prependage patch    · · · •
-                                    • appendage patch       · · •
-                                ◇ sibling insertion patch     ◇
-                                    • precession patch      · · •
-                                    • succession patch    · · · •
-                            • thoroughfractum designator    · · •
-                    ◇ material point
-                        ◇ specialized material point
-                            • aside point
-                            • exception point
-                            • task point
-                        • generic point
+
+        novel fracta
+            - New fractal types introduced by Waybrec.
+                : re `fractal types` see `^^typology$` @ `^^ Fractum$`
+                  @ http://reluk.ca/project/Breccia/language_definition.brec
+                /
+
+            ◇ body fractum
+                ◇ point
+                    ◇ formal point
+                        ◇ command point
+                            ◇ patch
+                                • deletion patch
+                                • replacement patch
+                                ◇ child insertion patch
+                                    • prependage patch
+                                    • appendage patch
+                                ◇ sibling insertion patch
+                                    • precession patch
+                                    • succession patch
+                            • thoroughfractum designator
 
 
 
