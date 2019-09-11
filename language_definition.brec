@@ -17,9 +17,9 @@ Definition of the language Waybrec
 
 
 
-    ━━━━━━
+    ━━━━━━━━━
      Fractum
-    ──────
+    ─────────
         : see @ http://reluk.ca/project/Breccia/language_definition.brec
         typology
             / Types marked on the right side are the new types introduced by Waybrec.
@@ -42,7 +42,7 @@ Definition of the language Waybrec
                                 ◇ sibling insertion patch     ◇
                                     • precession patch      · · •
                                     • succession patch    · · · •
-                            • thoroughbrec designator   · · · · •
+                            • thoroughfractum designator    · · •
                     ◇ material point
                         ◇ specialized material point
                             • aside point
@@ -106,16 +106,16 @@ Definition of the language Waybrec
 
 
 
-    ━━━━━━━━━━━━━━━━━━━━━━━━━
-     Thoroughbrec designator
-    ─────────────────────────
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     Thoroughfractum designator
+    ────────────────────────────
         / A command point.
-        - It marks its parent as a thoroughbrec.
+        - It marks its parent as a thoroughfractum.
         - Its descriptor has this form:
 
-               ───╴‘thoroughbrec’╶────▶
+               ───╴‘thoroughfractum’╶────▶
 
-            figure, The form of the descriptor in a thoroughbrec designator.
+            figure, The form of the descriptor in a thoroughfractum designator.
 
 
 
