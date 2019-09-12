@@ -2,19 +2,7 @@ Definition of the language Waybrec
 
     - Waybrec extends Breccia.
     - This document defines the extensions.
-        : re `extensions` see `^^redefined fracta$` @ `^^ Fractum$`
         : re `extensions` see     `^^novel fracta$` @ `^^ Fractum$`
-
-
-    ━━━━━━━━━━━━━━━
-     Command point
-    ───────────────
-        : see @ http://reluk.ca/project/Breccia/language_definition.brec
-        - No formal referent of a command point is located in the way model,
-          except where documented in the language definition.
-            / Nothing in the present definition does so.
-            / While the effect of a patch is located in the way model, for instance,
-              the fractum it refers to (via its fractum indicator) is located in waysource.
 
 
 
@@ -22,17 +10,6 @@ Definition of the language Waybrec
      Fractum
     ─────────
         : see @ http://reluk.ca/project/Breccia/language_definition.brec
-        redefined fracta
-            - Preexisting fractal types whose definitions are changed by Waybrec.
-                : re `fractal types` see `^^typology$` @ `^^ Fractum$`
-                  @ http://reluk.ca/project/Breccia/language_definition.brec
-                /
-
-            ◇ body fractum
-                ◇ point
-                    ◇ formal point
-                        ◇ command point
-
         novel fracta
             - New fractal types introduced by Waybrec.
                 : re `fractal types` see `^^typology$` @ `^^ Fractum$`
@@ -60,8 +37,8 @@ Definition of the language Waybrec
      Patch
     ───────
         / A command point.
-        - It alters the way model at a given fractum.
-            / The way model, not the waysource from which it was compiled.
+        - It alters the way model at a given fractum (referent fractum)
+          which it specifies by reference to the waysource.
         - Following is the sketch of a definition.
             redact+
 
