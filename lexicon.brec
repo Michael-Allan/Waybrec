@@ -6,7 +6,7 @@ Definition of terms for project Waybrec
     on-way
         ─ adjective and adverb
             - Being part of a way.
-            - Belonging to a thoroughfractum and thereby modelling part of a way.
+            - Belonging to a thoroughfractum in the way model and thereby representing part of a way.
     thoroughfracta
         ─ plural noun
             : see `^^─ noun$` @ `^^thoroughfractum$`
@@ -36,6 +36,16 @@ Definition of terms for project Waybrec
         ─ noun
             - A fractum in waysource.
             : see `^^─ plural noun$` @ `^^wayfracta$`
+    way model
+        ─ noun
+            - A representation of a way.
+            - A Waybreccian simulacrum.
+        ─ verb
+            - Represent a way.
+                / Mainly as a gerund, e.g. ‘making new waycasts by replicate way modelling’.
+    waysource
+        ─ mass noun
+            - Waybreccian source code.
 
 
                                         \ Copyright © 2019, Michael Allan and contributors.  Licence MIT.
