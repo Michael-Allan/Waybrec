@@ -5,7 +5,6 @@ Definition of the language Waybrec
         : re `extensions` see     `^^novel fracta$` @ `^^ Fractum$`
 
 
-
     ━━━━━━━━━
      Fractum
     ─────────
@@ -30,6 +29,18 @@ Definition of the language Waybrec
                                     • precession patch
                                     • succession patch
                             • thoroughfractum designator
+
+
+    ━━━━━━━━━
+     Jointer
+    ─────────
+        : see @ http://reluk.ca/project/Breccia/language_definition.brec
+        effect
+            : join @ `^^ Jointer$` @ http://reluk.ca/project/Breccia/language_definition.brec
+            - A jointer brings its referent on-way.
+                / A pointer does not.
+                - Waycasters may freely substitute a jointer for a pointer whenever they wish
+                  the referent to be included in the way.
 
 
 
