@@ -9,26 +9,21 @@ Definition of the language Waybrec
      Fractum
     ─────────
         : see @ http://reluk.ca/project/Breccia/language_definition.brec
-        novel fracta
+        novel typology
+            : see `^^typology$` @ `^^ Fractum$`
+              @ http://reluk.ca/project/Breccia/language_definition.brec
             - New fractal types introduced by Waybrec.
-                : re `fractal types` see `^^typology$` @ `^^ Fractum$`
-                  @ http://reluk.ca/project/Breccia/language_definition.brec
-                /
-
-            ◇ body fractum
-                ◇ point
-                    ◇ formal point
-                        ◇ command point
-                            ◇ patch
-                                • deletion patch
-                                • replacement patch
-                                ◇ child insertion patch
-                                    • prependage patch
-                                    • appendage patch
-                                ◇ sibling insertion patch
-                                    • precession patch
-                                    • succession patch
-                            • thoroughfractum designator
+            ─ command point ◇ introductions
+                ◇ patch
+                    • deletion patch
+                    • replacement patch
+                    ◇ child insertion patch
+                        • prependage patch
+                        • appendage patch
+                    ◇ sibling insertion patch
+                        • precession patch
+                        • succession patch
+                • thoroughfractum designator
 
 
     ━━━━━━━━━
@@ -111,4 +106,4 @@ Definition of the language Waybrec
 
 
 
-                                        \ Copyright © 2019, Michael Allan and contributors.  Licence MIT.
+                                        \ Copyright © 2020, Michael Allan and contributors.  Licence MIT.
