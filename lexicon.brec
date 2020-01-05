@@ -19,13 +19,11 @@ Definition of terms for project Waybrec
               its head representing the goal and its body the means.
             : see `^^─ plural noun$` @ `^^thoroughfracta$`
     Waybrec
-        / pronounced /weɪ́brɛtʃ/ as in ‘waybretch’
         ─ mass noun
             - A lightweight markup language, an extension of Breccia specialized for the purpose
               of way modelling.
                 : see `lightweight markup.+extension of Breccia.+way model` @ README.html
     Waybreccian
-        / pronounced /weɪ́brɛ̀tʃən/ as in ‘waybretchen’, or /weɪ́brɛ̀tʃɪən/ as in ‘waybretchian’
         ─ adjective
             - Relating to Waybrec.
     wayfracta
@@ -51,4 +49,4 @@ Definition of terms for project Waybrec
             - Waybreccian source code.
 
 
-                                        \ Copyright © 2019, Michael Allan and contributors.  Licence MIT.
+                                        \ Copyright © 2020, Michael Allan and contributors.  Licence MIT.
