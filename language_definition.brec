@@ -34,8 +34,9 @@ Definition of the language Waybrec
             : join @ `^^ Jointer$` @ http://reluk.ca/project/Breccia/language_definition.brec
             - A jointer brings its referent on-way.
                 / A pointer does not.
-                - Waycasters may freely substitute a jointer for a pointer whenever they wish
+                - Waycasters may freely substitute a jointer for a pointer when they wish
                   the referent to be included in the way.
+                - Such logical inclusion is the only additional effect of a jointer.
 
 
 
