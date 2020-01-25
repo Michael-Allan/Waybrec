@@ -13,7 +13,9 @@ Definition of the language Waybrec
             : see `^^typology$` @ `^^ Fractum$`
               @ http://reluk.ca/project/Breccia/language_definition.brec
             - New fractal types introduced by Waybrec.
-            ─ command point ◇ introductions
+
+            ╷ ◇ command point
+            ╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
                 ◇ patch
                     • deletion patch
                     • replacement patch
@@ -67,8 +69,6 @@ Definition of the language Waybrec
         ───────────────────────
          child insertion patch
         ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-            - A principal use case: ease of engagement declaration in recasts.
-
             prependage patch
                 - `: prepend @ …`
                 - Adds its children (to the way model) as the first children of the referent fractum.
@@ -104,6 +104,15 @@ Definition of the language Waybrec
                ───╴‘thoroughfractum’╶────▶
 
             diagram, The form of the descriptor in a thoroughfractum designator.
+
+
+
+    ━━━━━━━━━━━━━━━━━━━━━━
+     Way engagement point
+    ──────────────────────
+        - A task point made private by an intracast privatizer.
+            / The task point itself is either intracast, or extracast by way of a jointer.
+        - It declares a way engagement.
 
 
 
