@@ -46,8 +46,8 @@ Definition of the language Waybrec
      Patch
     ───────
         / A command point.
-        - It alters the way model at a given fractum (referent fractum)
-          which it specifies by reference to the waysource.
+        - A patch alters the way model at a fractum identified by reference
+          to the waysource (referent fractum).
         - Following is the sketch of a definition.
             redact+
 
