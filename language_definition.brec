@@ -5,27 +5,25 @@ Definition of the language Waybrec
         : re `extensions` see     `^^novel fracta$` @ `^^ Fractum$`
 
 
-    ━━━━━━━━━
-     Fractum
-    ─────────
-        : see @ http://reluk.ca/project/Breccia/language_definition.brec
-        novel typology
-            : see `^^typology$` @ `^^ Fractum$`
-              @ http://reluk.ca/project/Breccia/language_definition.brec
-            - New fractal types introduced by Waybrec.
+    ━━━━━━━━━━━━━━━
+     Fractal types
+    ───────────────
+        : see @ `^^ Fractum$` @ http://reluk.ca/project/Breccia/language_definition.brec
+        - Novel types introduced by Waybrec.
 
-            ╷ ◇ command point
-            ╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-                ◇ patch
-                    • deletion patch
-                    • replacement patch
-                    ◇ child insertion patch
-                        • prependage patch
-                        • appendage patch
-                    ◇ sibling insertion patch
-                        • precession patch
-                        • succession patch
-                • thoroughfractum designator
+        ╷ command point
+        ╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+            ◇ patch
+                ◆ deletion patch
+                ◆ replacement patch
+                ◇ child insertion patch
+                    ◆ prependage patch
+                    ◆ appendage patch
+                ◇ sibling insertion patch
+                    ◆ precession patch
+                    ◆ succession patch
+            ◆ thoroughfractum designator
+
 
 
     ━━━━━━━━━
@@ -87,10 +85,12 @@ Definition of the language Waybrec
                 - `: precede …`
                 - inserts its children (to the way model) as siblings directly before the referent fractum
                 - First term: mandatory.
+                - The referent must not be a document fractum.
             succession patch
                 - `: succeed …`
                 - appends its children (to the way model) as siblings directly after the referent fractum
                 - First term: mandatory.
+                - The referent must not be a document fractum.
 
 
 
