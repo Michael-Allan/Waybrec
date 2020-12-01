@@ -1,4 +1,4 @@
-Definition of the language Waybrec
+Waybrec language definition
 
     - Waybrec extends Breccia.
     - This document defines the extensions.
@@ -23,6 +23,10 @@ Definition of the language Waybrec
                     ◆ precession patch
                     ◆ succession patch
             ◆ thoroughfractum designator
+
+        legend
+            ◆ formal type
+            ◇ informal type
 
 
 
@@ -50,12 +54,26 @@ Definition of the language Waybrec
             redact+
 
         deletion patch
-            - `: delete …`
+            - Its descriptor has this form:
+
+                                   · · · ·
+                                   ·     ·
+                  ╶──╴‘delete’╶─── ·  ?  · ────▶
+                                   ·     ·
+                                   · · · ·
+
             - deletes the referent fractum from the way model
             - First term: mandatory.
 
         replacement patch
-            - `: replace …`
+            - Its descriptor has this form:
+
+                                    · · · ·
+                                    ·     ·
+                  ╶──╴‘replace’╶─── ·  ?  · ────▶
+                                    ·     ·
+                                    · · · ·
+
             - replaces the referent fractum in the way model
             - first term
                 - defaults (like elsewhere, mutatis mutandis)
@@ -68,12 +86,26 @@ Definition of the language Waybrec
          child insertion patch
         ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
             prependage patch
-                - `: prepend @ …`
+                - Its descriptor has this form:
+
+                                                      · · · ·
+                                                      ·     ·
+                      ╶──╴‘prepend’╶── gap ──╴‘@’╶─── ·  ?  · ────▶
+                                                      ·     ·
+                                                      · · · ·
+
                 - Adds its children (to the way model) as the first children of the referent fractum.
                 - First term: mandatory.
 
             appendage patch
-                - `: append @ …`
+                - Its descriptor has this form:
+
+                                                     · · · ·
+                                                     ·     ·
+                      ╶──╴‘append’╶── gap ──╴‘@’╶─── ·  ?  · ────▶
+                                                     ·     ·
+                                                     · · · ·
+
                 - Adds its children (to the way model) as the last children of the referent fractum.
                 - First term: mandatory.
 
@@ -82,12 +114,26 @@ Definition of the language Waybrec
          sibling insertion patch
         ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
             precession patch
-                - `: precede …`
+                - Its descriptor has this form:
+
+                                        · · · ·
+                                        ·     ·
+                      ╶──╴‘precede’╶─── ·  ?  · ────▶
+                                        ·     ·
+                                        · · · ·
+
                 - inserts its children (to the way model) as siblings directly before the referent fractum
                 - First term: mandatory.
                 - The referent must not be a document fractum.
             succession patch
-                - `: succeed …`
+                - Its descriptor has this form:
+
+                                        · · · ·
+                                        ·     ·
+                      ╶──╴‘succeed’╶─── ·  ?  · ────▶
+                                        ·     ·
+                                        · · · ·
+
                 - appends its children (to the way model) as siblings directly after the referent fractum
                 - First term: mandatory.
                 - The referent must not be a document fractum.
@@ -102,8 +148,6 @@ Definition of the language Waybrec
         - Its descriptor has this form:
 
                ───╴‘thoroughfractum’╶────▶
-
-            diagram, The form of the descriptor in a thoroughfractum designator.
 
 
 
