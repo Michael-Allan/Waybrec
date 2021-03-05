@@ -1,7 +1,7 @@
 Waybrec language definition
 
     - Waybrec extends Breccia.
-    - This document defines the extensions.
+    - This file defines the extensions.
         : re `extensions` see `^^novel fracta$` @ `^^ Fractum$`
 
 
@@ -124,7 +124,7 @@ Waybrec language definition
 
                 - inserts its children (to the way model) as siblings directly before the referent fractum
                 - First term: mandatory.
-                - The referent must not be a document fractum.
+                - The referent must not be a file fractum.
             succession patch
                 - Its command has this form:
 
@@ -136,7 +136,7 @@ Waybrec language definition
 
                 - appends its children (to the way model) as siblings directly after the referent fractum
                 - First term: mandatory.
-                - The referent must not be a document fractum.
+                - The referent must not be a file fractum.
 
 
 
