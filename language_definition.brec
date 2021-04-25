@@ -88,11 +88,11 @@ Waybrec language definition
             prependage patch
                 - Its command has this form:
 
-                                                      · · · ·
-                                                      ·     ·
-                      ╶──╴‘prepend’╶── gap ──╴‘@’╶─── ·  ?  · ───▶
-                                                      ·     ·
-                                                      · · · ·
+                                                    · · · ·
+                                                    ·     ·
+                      ╶──╴‘prepend’╶── P ──╴‘@’╶─── ·  ?  · ───▶
+                                                    ·     ·
+                                                    · · · ·
 
                 - Adds its children (to the way model) as the first children of the referent fractum.
                 - First term: mandatory.
@@ -100,11 +100,11 @@ Waybrec language definition
             appendage patch
                 - Its command has this form:
 
-                                                     · · · ·
-                                                     ·     ·
-                      ╶──╴‘append’╶── gap ──╴‘@’╶─── ·  ?  · ───▶
-                                                     ·     ·
-                                                     · · · ·
+                                                   · · · ·
+                                                   ·     ·
+                      ╶──╴‘append’╶── P ──╴‘@’╶─── ·  ?  · ───▶
+                                                   ·     ·
+                                                   · · · ·
 
                 - Adds its children (to the way model) as the last children of the referent fractum.
                 - First term: mandatory.
