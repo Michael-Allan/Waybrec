@@ -47,7 +47,7 @@ Waybrec language definition
     ━━━━━━━
      Patch
     ───────
-        / A command point.
+        / A type of command point.
         - A patch alters the way model at a fractum identified by reference
           to the waysource (referent fractum).
         - Following is the sketch of a definition.
@@ -143,7 +143,7 @@ Waybrec language definition
     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      Thoroughfractum designator
     ────────────────────────────
-        / A command point.
+        / A type of command point.
         - It marks its parent as a thoroughfractum.
         - Its command has this form:
 
