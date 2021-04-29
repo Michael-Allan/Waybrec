@@ -154,4 +154,18 @@ Waybrec language definition
 
 
 
+    ━━━━━━━━━━━
+     Way model
+    ───────────
+        : cf. `^^ Simulacrum$` @ http://reluk.ca/project/Breccia/language_definition.brec
+        - The Waybreccian text of a waycast in compiled, executable form,
+          as opposed to the initial, written form of its source code.
+            - A representation of an aimed way of life.
+            - A Waybreccian simulacrum.
+        - It comprises a compiled set of Breccian files, each of which either belongs to the waycast
+          or lies subjoint of it.
+        - It results from compiling the waycast.
+
+
+
                                                     \ Copyright © 2019-2021  Michael Allan.  Licence MIT.
