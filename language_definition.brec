@@ -1,142 +1,135 @@
 Waybrec language definition
 
-    - Waybrec extends Breccia.
+    - Waybrec is an extension of Breccia.
     - This file defines the extensions.
-        : re `extensions` see `^^novel fracta$` @ `^^ Fractum$`
-
-
-    ━━━━━━━━━━━━━━━
-     Fractal types
-    ───────────────
-        : see @ `^^ Fractum$` @ http://reluk.ca/project/Breccia/language_definition.brec
-        - Novel types introduced by Waybrec.
+        : see also `Novel types introduced` @ `^^ Fractal types$`
+    - Novel fractal types introduced by Waybrec:
+        : re `fractal types` see @ http://reluk.ca/project/Breccia/language_definition.brec
 
         ╷ command point
         ╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+            ◆ body reference
             ◇ patch
-                ◆ deletion patch
-                ◆ replacement patch
-                ◇ child insertion patch
-                    ◆ prependage patch
-                    ◆ appendage patch
-                ◇ sibling insertion patch
-                    ◆ precession patch
-                    ◆ succession patch
+                ◆ switch patch
+                ◆ insertion patch
+                ◆ substitution patch
             ◆ thoroughfractum designator
 
-        legend
-            ◇ abstract type
-            ◆ concrete type
+            : see `^^legend$` @ `fractal types` @ http://reluk.ca/project/Breccia/language_definition.brec
 
+
+
+    ━━━━━━━━━━━━━━━━
+     Body reference
+    ────────────────
+        - A command point that refers to the body of a fractum.
+        - Its command has this form:
+
+              ╶──╴‘body’╶── P ── containment clause ───▶
+
+        - Its referent is the body of `indicated fractum( fractum indicant of containment clause )`.
 
 
     ━━━━━━━━━
      Jointer
     ─────────
         : see @ http://reluk.ca/project/Breccia/language_definition.brec
-        effect
-            : join @ `^^ Jointer$` @ http://reluk.ca/project/Breccia/language_definition.brec
-            - A jointer brings its referent on-way.
-                / A pointer does not.
-                - Waycasters may freely substitute a jointer for a pointer when they wish
-                  the referent to be included in the way.
-                - Such logical inclusion is the only additional effect of a jointer.
+        - With a fractal referent, a jointer brings the referent on-way.
+            : re `fractal referent` see `The `non-fractal` qualifier` @ `^^ Resource indicant$` @
+              http://reluk.ca/project/Breccia/language_definition.brec
+            - Thereby it brings the referent file or waycast into the way model, if not there already.
+            / A pointer has no such effect.
+            - A waycaster may substitute a jointer for a pointer wherever he wants this effect.
+                / E.g. for purposes of patching.
+        - No jointer may refer to a patch or patch descendant.
+            : see `^^- No patch nor descendant of a patch is considered to be on-way.$` @ `^^ Patch$`
 
 
 
     ━━━━━━━
      Patch
     ───────
-        / A type of command point.
-        - A patch alters the way model at a fractum identified by reference
-          to the waysource (referent fractum).
-        - Following is the sketch of a definition.
-            redact+
+        - A command point that alters the way model.
+        - Its command has this form:
 
-        deletion patch
-            - Its command has this form:
+                                   directive
+                                 ┌────────────┐
+             
+                                 ┌───╴‘on’╶───┐
+                                 │            │
+                                 ├───╴‘off’╶──┤
+              ╶──╴‘patch’╶── S ──┤            ├── P ── fractum indicant ───▶
+                                 ├─╴‘before’╶─┤
+                                 │            │
+                                 ├──╴‘after’╶─┤
+                                 │            │
+                                 └──╴‘over’╶──┘
 
-                                   · · · ·
-                                   ·     ·
-                  ╶──╴‘delete’╶─── ·  ?  · ───▶
-                                   ·     ·
-                                   · · · ·
+        - No patch may descend, whether directly or by body reference, from a patch.
+        - No patch nor descendant of a patch is considered to be on-way.
+            : see `^^- Patch bodies as such are not compiled` @ `^^ Patch$`
+        - The directive of a patch determines its type as one of switch, insertion or substitution.
 
-            - deletes the referent fractum from the way model
-            - First term: mandatory.
+              Directive      Patch type
+             ╶───────────────────────────
+              on, off        switch
+              before, after  insertion
+              over           substitution
 
-        replacement patch
-            - Its command has this form:
+        - The fractum indicant of a patch indicates its application target.
+            : re `application` see `^^apply\( patch \)$`
+            - Targets within files of the way model alone are valid.
+                / The intent of this rule is to avoid an accumulation of pointless, obsolete patches.
+        - The target of a switch patch is an insertion or substitution patch to be switched on or off.
+            - The targeted patch must be declared within a waycast of the way model (a waycast with at
+              least one file in the model) and its own target must lie within a file of the way model.
+            - All switch patches are bodiless.
+        - The body of an insertion or substitution patch defines, either directly or by body reference,
+          the content to be inserted or substituted into the way model at the target.
+            - Patch bodies as such are not compiled; rather the patches are applied to the way model,
+              then the way model is compiled.
+            - A bodiless substitution patch effects a deletion.
 
-                                    · · · ·
-                                    ·     ·
-                  ╶──╴‘replace’╶─── ·  ?  · ───▶
-                                    ·     ·
-                                    · · · ·
-
-            - replaces the referent fractum in the way model
-            - first term
-                - defaults (like elsewhere, mutatis mutandis)
-                  to a pattern based on the head of the first child of the patch
-                    - so the referent head would be unchanged,
-                      or changed only trivially as the pattern formation allows
-
-
-        ───────────────────────
-         child insertion patch
-        ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-            prependage patch
-                - Its command has this form:
-
-                                                    · · · ·
-                                                    ·     ·
-                      ╶──╴‘prepend’╶── P ──╴‘@’╶─── ·  ?  · ───▶
-                                                    ·     ·
-                                                    · · · ·
-
-                - Adds its children (to the way model) as the first children of the referent fractum.
-                - First term: mandatory.
-
-            appendage patch
-                - Its command has this form:
-
-                                                   · · · ·
-                                                   ·     ·
-                      ╶──╴‘append’╶── P ──╴‘@’╶─── ·  ?  · ───▶
-                                                   ·     ·
-                                                   · · · ·
-
-                - Adds its children (to the way model) as the last children of the referent fractum.
-                - First term: mandatory.
-
-
-        ─────────────────────────
-         sibling insertion patch
-        ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-            precession patch
-                - Its command has this form:
-
-                                        · · · ·
-                                        ·     ·
-                      ╶──╴‘precede’╶─── ·  ?  · ───▶
-                                        ·     ·
-                                        · · · ·
-
-                - inserts its children (to the way model) as siblings directly before the referent fractum
-                - First term: mandatory.
-                - The referent must not be a file fractum.
-            succession patch
-                - Its command has this form:
-
-                                        · · · ·
-                                        ·     ·
-                      ╶──╴‘succeed’╶─── ·  ?  · ───▶
-                                        ·     ·
-                                        · · · ·
-
-                - appends its children (to the way model) as siblings directly after the referent fractum
-                - First term: mandatory.
-                - The referent must not be a file fractum.
+        apply( insertion or substitution patch `p` )
+            : join `^^simulacral reference$` @ `^^ Notes$` @
+              http://reluk.ca/project/Breccia/language_definition.brec
+            deem+ `d` a directive, that of `p`;
+                  `iF` a fractum indicant, that of `p`;
+                  `t` a target, that of `indicated fractum( iF )`
+            if( `t` is a patch descendant )
+                throw+ Attempt to patch a patch
+                    / One may patch the application of a patch, but not the patch itself.
+            deem+ `fB` a fractum, that which contains the applicable body of the patch
+            if( the body of `p` comprises a body reference `rB` )
+                + Set `fB` to `indicated fractum( fractum indicant of `rB` )`.
+            else
+                for( each descendant of `p` that is a body reference )
+                    warn+ Body reference ignored because it is not the sole child of the patch
+                + Set `fB` to `p`.
+            switch( `d` )
+                case( ‘before’ )
+                    if( `fB` is bodiless )
+                        throw+ Bodiless insertion patch
+                    if( `t` is a file fractum )
+                        throw+ Attempt to introduce a sibling to a file fractum
+                    for( each child `c` of `fB` in linear order )
+                        + Insert a copy of `c` as the sibling predecessor of `t`.
+                case( ‘after’ )
+                    if( `fB` is bodiless )
+                        throw+ Bodiless insertion patch
+                    if( `t` is a file fractum )
+                        throw+ Attempt to introduce a sibling to a file fractum
+                    for( each child `c` of `fB` in reverse linear order )
+                        + Insert a copy of `c` as the sibling successor of `t`.
+                case( ‘over’ )
+                    if( `t` is a patch )
+                        throw+ Attempt to patch a patch
+                    if( `t` is a file fractum and `fB` has multiple children )
+                        throw+ Attempt to introduce sibling file fracta
+                    if( `fB` has a body )
+                        for( each child `c` of `fB` in linear order )
+                            + Insert a copy of `c` as the sibling predecessor of `t`.
+                    + Delete `t`.
 
 
 
@@ -144,7 +137,8 @@ Waybrec language definition
      Thoroughfractum designator
     ────────────────────────────
         / A type of command point.
-        - It marks its parent as a thoroughfractum.
+        - It marks its simulacral parent as a thoroughfractum, thereby defining the surjoint apex
+          from which the way model depends.
         - Its command has this form:
 
               ╶──╴‘thoroughfractum’╶───▶
