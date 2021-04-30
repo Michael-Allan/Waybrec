@@ -102,6 +102,8 @@ Waybrec language definition
             - All switch patches are bodiless.
         - The body of an insertion or substitution patch defines, either directly or by body reference,
           the content to be inserted or substituted into the way model at the target.
+            / For this purpose a body reference may be used, e.g. referring to the body of another patch,
+              in order to re-apply the same patch content to a different target.
             - Patch bodies as such are not compiled; rather the patches are applied to the way model,
               then the way model is compiled.
             - A bodiless substitution patch effects a deletion.
