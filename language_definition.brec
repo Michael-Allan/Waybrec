@@ -27,7 +27,23 @@ Waybrec language definition
 
               ╶──╴‘body’╶── P ── containment clause ───▶
 
-        - Its referent is the body of `indicated fractum( fractum indicant of containment clause )`.
+        - The referent of a body reference `rB` is the body of `referent parent( rB )`.
+        / The determination is recursive, as the formal referent may itself be a body reference.
+
+        referent parent( body reference `rB` )
+            : join `^^simulacral reference$` @ `^^ Notes$`
+            deem+ `p` a fractum
+            + Set `p` to `indicated fractum( fractum indicant of containment clause of `rB` )`
+            if( the body of `p` comprises a body reference `rrB` )
+                return+ `referent parent( rrB )`
+                    / Here compilers should detect and avoid an infinite reference loop.
+            warn of ignored body references+ `p`
+            return+ `p`
+
+        warn of ignored body references( fractum `f`, whose body comprises other than a body reference )
+            : join `^^simulacral reference$` @ `^^ Notes$`
+            for( each child of `f` that is a body reference )
+                warn+ Body reference ignored: it is not the sole child
 
 
     ━━━━━━━━━
@@ -91,8 +107,7 @@ Waybrec language definition
             - A bodiless substitution patch effects a deletion.
 
         apply( insertion or substitution patch `p` )
-            : join `^^simulacral reference$` @ `^^ Notes$` @
-              http://reluk.ca/project/Breccia/language_definition.brec
+            : join `^^simulacral reference$` @ `^^ Notes$`
             deem+ `d` a directive, that of `p`;
                   `iF` a fractum indicant, that of `p`;
                   `t` a target, that of `indicated fractum( iF )`
@@ -101,11 +116,10 @@ Waybrec language definition
                     / One may patch the application of a patch, but not the patch itself.
             deem+ `fB` a fractum, that which contains the applicable body of the patch
             if( the body of `p` comprises a body reference `rB` )
-                + Set `fB` to `indicated fractum( fractum indicant of `rB` )`.
+                + Set `fB` to `referent parent( `rB` )`.
             else
-                for( each descendant of `p` that is a body reference )
-                    warn+ Body reference ignored because it is not the sole child of the patch
                 + Set `fB` to `p`.
+                warn of ignored body references+ `fB`
             switch( `d` )
                 case( ‘before’ )
                     if( `fB` is bodiless )
@@ -165,6 +179,16 @@ Waybrec language definition
         - It comprises a compiled set of Breccian files, each of which either belongs to the waycast
           or lies subjoint of it.
         - It results from compiling the waycast.
+
+
+
+    ━━━━━━
+     Note
+    ──────
+        simulacral reference
+            - Herein the default referent is the simulacrum (aka the way model), not the source code.
+                : cf. `^^default referent` @ `^^ Simulacrum$` @
+                  http://reluk.ca/project/Breccia/language_definition.brec
 
 
 
