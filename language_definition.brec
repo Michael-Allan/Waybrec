@@ -37,7 +37,7 @@ Waybrec language definition
             if( the body of `p` comprises a body reference `rrB` )
                 return+ `referent parent( rrB )`
                     / Here compilers should detect and avoid an infinite reference loop.
-            warn of ignored body references+ `p`
+            warn of ignored body references(+ `p` )
             return+ `p`
 
         warn of ignored body references( fractum `f`, whose body comprises other than a body reference )
@@ -121,7 +121,7 @@ Waybrec language definition
                 + Set `fB` to `referent parent( `rB` )`.
             else
                 + Set `fB` to `p`.
-                warn of ignored body references+ `fB`
+                warn of ignored body references(+ `fB` )
             switch( `d` )
                 case( ‘before’ )
                     if( `fB` is bodiless )
