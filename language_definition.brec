@@ -46,6 +46,7 @@ Waybrec language definition
                 warn+ Body reference ignored: it is not the sole child
 
 
+
     ━━━━━━━━━
      Jointer
     ─────────
@@ -59,6 +60,14 @@ Waybrec language definition
                 / E.g. for purposes of patching.
         - No jointer may refer to a patch or patch descendant.
             : see `^^- No patch nor descendant of a patch is considered to be on-way.$` @ `^^ Patch$`
+        compile( jointer )
+            compile(+ jointer )
+                : join @ `^^ Jointer$` @ http://reluk.ca/project/Breccia/language_definition.brec
+            deem+ `sub` the fractum thereby subjoined
+            - Each child of `sub` gains for a parent each parent of the jointer
+              that does not duplicate a pre-existing parent.
+                : cf. `Each parent of the jointer gains for a child` @ `^^ Jointer$` @
+                  http://reluk.ca/project/Breccia/language_definition.brec
 
 
 
