@@ -31,7 +31,7 @@ Waybrec language definition
         / The determination is recursive, as the formal referent may itself be a body reference.
 
         referent parent( body reference `rB` )
-            : join `^^simulacral reference$` @ `^^ Notes$`
+            : join `^^simulacral reference$` @ `^^ Note$`
             deem+ `p` a fractum
             + Set `p` to `indicated fractum( fractum indicant of containment clause of `rB` )`
             if( the body of `p` comprises a body reference `rrB` )
@@ -41,7 +41,7 @@ Waybrec language definition
             return+ `p`
 
         warn of ignored body references( fractum `f`, whose body comprises other than a body reference )
-            : join `^^simulacral reference$` @ `^^ Notes$`
+            : join `^^simulacral reference$` @ `^^ Note$`
             for( each child of `f` that is a body reference )
                 warn+ Body reference ignored: it is not the sole child
 
@@ -132,7 +132,7 @@ Waybrec language definition
             - A bodiless substitution patch effects a deletion.
 
         apply( insertion or substitution patch `p` )
-            : join `^^simulacral reference$` @ `^^ Notes$`
+            : join `^^simulacral reference$` @ `^^ Note$`
             deem+ `d` a directive, that of `p`;
                   `iF` a fractum indicant, that of `p`;
                   `t` a target, that of `indicated fractum( iF )`
