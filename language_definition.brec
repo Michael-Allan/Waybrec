@@ -47,6 +47,20 @@ Waybrec language definition
 
 
 
+    ━━━━━━━━━━━━━
+     Compilation
+    ─────────────
+        : cf. @ http://reluk.ca/project/Breccia/language_definition.brec
+        - Compilation of a way model from a waycast.
+        compile( waycast `w` )
+            : join `^^simulacral reference$` @ `^^ Note$`
+            0+ Initialize
+            1+ Intern
+            2+ Patch
+            3+ Compile
+
+
+
     ━━━━━━━━━
      Jointer
     ─────────
@@ -183,13 +197,14 @@ Waybrec language definition
      Way model
     ───────────
         : cf. `^^ Simulacrum$` @ http://reluk.ca/project/Breccia/language_definition.brec
-        - The Waybreccian text of a waycast in compiled, executable form,
+        - A waycast in compiled, executable form,
           as opposed to the initial, written form of its source code.
             - A representation of an aimed way of life.
             - A Waybreccian simulacrum.
         - It comprises a compiled set of Breccian files, each originating either in the waycast
           or elsewhere subjoint of it.
         - It results from compiling the waycast.
+            : re `compiling` see `^^ Compilation$`
 
 
 
