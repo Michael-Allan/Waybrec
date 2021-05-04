@@ -2,29 +2,6 @@ Definition of terms for project Waybrec
 
     : see also http://reluk.ca/project/wayic/refractory/index.brec
 
-    local
-        ─ adjective
-            - (of a waycast or waysource) Containing or surjoining the thoroughfractum
-              that determines a given way model.
-    off-way
-        ─ adjective and adverb
-            - Not on-way.
-    on-way
-        ─ adjective and adverb
-            - Being part of an aimed way of life.
-            - Being or descending from a thoroughfractum in the way model and thereby representing
-              part of the way.
-    thoroughfracta
-        ─ plural noun
-            : see `^^─ noun$` @ `^^thoroughfractum$`
-    thoroughfractal
-        ─ adjective
-            : see `^^thoroughfractum$`
-    thoroughfractum
-        ─ noun
-            - A wayfractum that models a way completely through to the endmost goal,
-              its head representing the goal and its body the means.
-            : see `^^─ plural noun$` @ `^^thoroughfracta$`
     Waybrec
         ─ mass noun
             - A lightweight markup language, an extension of Breccia specialized for the purpose
@@ -35,23 +12,13 @@ Definition of terms for project Waybrec
             : see `^^Waybrec$`
     wayfracta
         ─ plural noun
-            : see `^^─ noun$` @ `^^wayfractum$`
+            : see `^^wayfractum$`
     wayfractal
         ─ adjective
             : see `^^wayfractum$`
     wayfractum
         ─ noun
             - A fractum in waysource.
-            : see `^^─ plural noun$` @ `^^wayfracta$`
-    way model
-        ─ noun
-            - A representation of an aimed way of life.
-                : see @ `^^ Way model$` @ language_definition.brec
-            - A Waybreccian simulacrum.
-                : see @ `^^ Way model$` @ language_definition.brec
-        ─ verb
-            - Represent an aimed way of life.
-                / Mainly as a gerund, e.g. ‘making new waycasts by replicate way modelling’.
     waysource
         ─ mass noun
             - Waybreccian source code.

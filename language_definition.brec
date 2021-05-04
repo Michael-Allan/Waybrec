@@ -47,64 +47,6 @@ Waybrec language definition
 
 
 
-    ━━━━━━━━━━━━━
-     Compilation
-    ─────────────
-        : cf. @ http://reluk.ca/project/Breccia/language_definition.brec
-        - Compilation of a way model from a waycast.
-        compile( waycast `w` )
-            : join `^^simulacral reference$` @ `^^ Note$`
-            0+ Initialize
-                if( `w` contains at its base a file or directory named `:` )
-                    throw+ Disallowed file name
-            1+ Intern
-            2+ Patch
-            3+ Compile
-
-
-
-    ━━━━━━━━━━━━
-     Internment
-    ────────────
-        - All extracast files of a way model are copied and stored (interned) within the model
-          at a path formed as follows.
-
-              ╶──╴‘:/’╶── authority ── path ───▶
-
-                : re `authority` see https://tools.ietf.org/html/rfc3986#section-3.2
-                : re `path` see https://tools.ietf.org/html/rfc3986#section-3.3
-            - The authority and path components of the interned file
-              are those of its original location (URI form).
-                : re `URI form` see https://tools.ietf.org/html/rfc3986#section-3
-        - A public way model includes its internments, to which other waysource may refer.
-            / The following, for example, refers to a publicly interned file.
-              http://reluk.ca/project/waycast/:/cleo.abacus.au/walt/waycast/foo.brec
-            - The referent, in that case, would be the file as seen in the interning way model (M).
-                / E.g. `https://cleo.abacus.au/walt/waycast/foo.brec`
-                  as seen in `http://reluk.ca/project/waycast/`.
-            - Compiling a jointer to such a referent would intern the file from its original waycast,
-              while applying (where conflict resolution allows) the patches of M.
-
-        intern( URI `u` )
-            / Interns the referent of the given URI, unless already it was interned.
-            if( `u` lacks an authority component )
-                throw+ Malformed reference
-            if( `u` refers to a waycast file )
-                + Set `u` to `canonicalize( u )`.
-                    : re `canonicalize` see `canonicalize\( URI` @ `^^ Canonical location$` @
-                      http://reluk.ca/project/wayic/cast/form_of_a_waycast.brec
-                deem+ `uL` a URI, that of the canonical location of the local waycast
-                if( `u` begins with `uL` )
-                    throw+ Attempt to intern a local waycast file
-            deem+ `p` the internment path derived from `u`
-                : re `internment path` see `are .+interned.+ at a path formed as follows`
-            if( `p` is  absent from the way model )
-                + Copy the referent of `u` to `p`.
-                for( each relative reference `r` in the copy )
-                    + Replace `r` with an absolute reference, that of `r` resolved against `u`.
-
-
-
     ━━━━━━━━━
      Jointer
     ─────────
@@ -234,21 +176,6 @@ Waybrec language definition
         - A task point made private by an intracast privatizer.
             / The task point itself is either intracast, or extracast by way of a jointer.
         - It declares a way engagement.
-
-
-
-    ━━━━━━━━━━━
-     Way model
-    ───────────
-        : cf. `^^ Simulacrum$` @ http://reluk.ca/project/Breccia/language_definition.brec
-        - A waycast in compiled, executable form,
-          as opposed to the initial, written form of its source code.
-            - A representation of an aimed way of life.
-            - A Waybreccian simulacrum.
-        - It comprises a compiled directory of files, each originating either in the waycast
-          or elsewhere subjoint of it.
-        - It results from compiling the waycast.
-            : re `compiling` see `^^ Compilation$`
 
 
 
