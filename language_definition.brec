@@ -112,9 +112,11 @@ Waybrec language definition
         - The body of an insertion or substitution patch defines, either directly or by body reference,
           the content to be inserted or substituted into the way model at the target.
             / For this purpose a body reference may be used, e.g. referring to the body of another patch,
-              in order to re-apply the same patch content to a different target.
+              in order to (re)apply the same content to a different target.
+            - URI references within a patch body are formed as usual, and rebased to the target file
+              (or files) only at time of application.
             - Patch bodies as such are not compiled; rather the patches are applied to the way model,
-              then the way model is compiled.
+              then the patched way model is compiled.
             - A bodiless substitution patch effects a deletion.
 
         apply( insertion or substitution patch `p` )
@@ -138,14 +140,16 @@ Waybrec language definition
                     if( `t` is a file fractum )
                         throw+ Attempt to introduce a sibling to a file fractum
                     for( each child `c` of `fB` in linear order )
-                        + Insert a copy of `c` as the sibling predecessor of `t`.
+                        + Insert as the sibling predecessor of `t` a copy of `c`,
+                          and rebase accordingly any URI references it contains.
                 case( ‘after’ )
                     if( `fB` is bodiless )
                         throw+ Bodiless insertion patch
                     if( `t` is a file fractum )
                         throw+ Attempt to introduce a sibling to a file fractum
                     for( each child `c` of `fB` in reverse linear order )
-                        + Insert a copy of `c` as the sibling successor of `t`.
+                        + Insert as the sibling successor of `t` a copy of `c`,
+                          and rebase accordingly any URI references it contains.
                 case( ‘over’ )
                     if( `t` is a patch )
                         throw+ Attempt to patch a patch
@@ -153,7 +157,8 @@ Waybrec language definition
                         throw+ Attempt to introduce sibling file fracta
                     if( `fB` has a body )
                         for( each child `c` of `fB` in linear order )
-                            + Insert a copy of `c` as the sibling predecessor of `t`.
+                            + Insert as the sibling predecessor of `t` a copy of `c`,
+                              and rebase accordingly any URI references it contains.
                     + Delete `t`.
 
 
