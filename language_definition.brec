@@ -52,8 +52,8 @@ Waybrec language definition
     ─────────
         : see also @ http://reluk.ca/project/Breccia/language_definition.brec
         - With a fractal referent, a jointer brings the referent on-way.
-            : re `fractal referent` see `The `non-fractal` qualifier` @ `^^ Resource indicant$` @
-              http://reluk.ca/project/Breccia/language_definition.brec
+            : re `fractal referent` cf. `^^non-fractal$` @
+              http://reluk.ca/project/wayic/refractory/index.brec
             - Thereby it brings the referent file or waycast into the way model, if not there already.
             / A pointer has no such effect.
             - A waycaster may substitute a jointer for a pointer wherever he wants this effect.
@@ -160,6 +160,32 @@ Waybrec language definition
                             + Insert as the sibling predecessor of `t` a copy of `c`,
                               and rebase accordingly any URI references it contains.
                     + Delete `t`.
+
+
+
+    ━━━━━━━━━━━━━━━━━━━
+     Resource indicant
+    ───────────────────
+        : see also @ http://reluk.ca/project/Breccia/language_definition.brec
+                ·
+                    ┌──────────╴◀──────────────────┐
+                    │                              │
+                    │  ┌──╴‘non-fractal’╶──┐       │
+              ╶──┬──┴──┤                   ├── P ──┴──┬── URI reference ────▶
+                 │     └───╴‘uninterned’╶──┘          │
+                 │                                    │
+                 └────────────────────────────────────┘
+                    : re `URI reference` see https://tools.ietf.org/html/rfc3986#section-4.1
+                diagram, The form of a resource indicant.
+
+            / Here Waybrec introduces the `uninterned` qualifier.
+        - The `uninterned` qualifier, where present on a resource indicant of an associative reference,
+          stops any internment that would occur on account of that reference.
+            : re `any internment that would occur`
+              see `^^if\( .+ present and without an \`uninterned\` qualifier \)$` @
+              `^^for\( each associative reference` @ `Compile$` @
+              http://reluk.ca/project/wayic/model/form_and_compilation.brec
+            - Outside of an associative reference, the `uninterned` qualifier has no effect.
 
 
 
