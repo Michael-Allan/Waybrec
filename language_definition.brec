@@ -4,7 +4,7 @@ Waybrec language definition
     - This file defines the extensions.
         : see also `Novel types introduced` @ `^^ Fractal types$`
     - Novel fractal types introduced by Waybrec:
-        : re `fractal types` see @ http://reluk.ca/project/Breccia/language_definition.brec
+        : re `fractal types` see also @ http://reluk.ca/project/Breccia/language_definition.brec
 
         ╷ command point
         ╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
@@ -50,7 +50,7 @@ Waybrec language definition
     ━━━━━━━━━
      Jointer
     ─────────
-        : see @ http://reluk.ca/project/Breccia/language_definition.brec
+        : see also @ http://reluk.ca/project/Breccia/language_definition.brec
         - With a fractal referent, a jointer brings the referent on-way.
             : re `fractal referent` see `The `non-fractal` qualifier` @ `^^ Resource indicant$` @
               http://reluk.ca/project/Breccia/language_definition.brec
