@@ -5,8 +5,8 @@ Definition of terms for project Waybrec
     Waybrec
         ─ mass noun
             - A lightweight markup language, an extension of Breccia specialized for the purpose
-              of way modelling.
-                : see `lightweight markup.+extension of Breccia.+way model` @ README.html
+              of way declaration.
+                : see `lightweight markup.+extension of Breccia.+\R.+declaring` @ README.html
     Waybreccian
         ─ adjective
             : see `^^Waybrec$`
