@@ -19,6 +19,26 @@ Waybrec language definition
 
 
 
+    ━━━━━━━━━━━━━━━━━━━━━━━
+     Associative reference
+    ───────────────────────
+        : see also @ http://reluk.ca/project/Breccia/language_definition.brec
+        - No associative reference may refer to a patch or patch descendant.
+            : cf. `^^- No patch nor descendant of a patch is considered to be on-way` @ `^^ Patch$`
+            / Either one must refer to where the patch is applied, or use a `non-fractal` qualifier.
+        compile( associative reference )
+            : join `^^simulacral reference$` @ `^^ Notes$`
+            referrers(+ associative reference )
+                : see @ http://reluk.ca/project/Breccia/language_definition.brec
+            deem+ `t` the referent
+            + Set `t` to `referent( associative reference )`.
+                : re `\`referent(.+)\`` see same head @
+                  http://reluk.ca/project/Breccia/language_definition.brec
+            if( `t` is a patch, or descends from a patch )
+                throw+ invalid referent: patch or patch descendant
+
+
+
     ━━━━━━━━━━━━━━━━
      Body reference
     ────────────────
@@ -58,11 +78,9 @@ Waybrec language definition
             / A pointer has no such effect.
             - A waycaster may substitute a jointer for a pointer wherever he wants this effect.
                 / E.g. for purposes of patching.
-        - No jointer may refer to a patch or patch descendant.
-            : see `^^- No patch nor descendant of a patch is considered to be on-way.$` @ `^^ Patch$`
         compile( jointer )
             compile(+ jointer )
-                : join @ `^^ Jointer$` @ http://reluk.ca/project/Breccia/language_definition.brec
+                : see @ `^^ Jointer$` @ http://reluk.ca/project/Breccia/language_definition.brec
             deem+ `sub` the fractum thereby subjoined
             - Each child of `sub` gains for a parent each parent of the jointer
               that does not duplicate a pre-existing parent.
@@ -78,7 +96,7 @@ Waybrec language definition
         - Its command has this form:
 
                                    directive
-                                 ┌────────────┐
+                                ┌──────────────┐
              
                                  ┌───╴‘on’╶───┐
                                  │            │
