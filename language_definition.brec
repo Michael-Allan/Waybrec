@@ -23,19 +23,19 @@ Waybrec language definition
      Associative reference
     ───────────────────────
         : see also @ http://reluk.ca/project/Breccia/language_definition.brec
-        - No associative reference may refer to a patch or patch descendant.
+        - No associative reference may refer to a patch or patch constituent.
             : cf. `^^- No patch nor descendant of a patch is considered to be on-way` @ `^^ Patch$`
             / Either one must refer to where the patch is applied, or use a `non-fractal` qualifier.
         compile( associative reference )
             : join `^^simulacral reference$` @ `^^ Notes$`
-            referrers(+ associative reference )
-                : see @ http://reluk.ca/project/Breccia/language_definition.brec
+            + `referrers( associative reference )`
+                : re `\`(.+)\`` see same head @ http://reluk.ca/project/Breccia/language_definition.brec
             deem+ `t` the referent
             + Set `t` to `referent( associative reference )`.
-                : re `\`referent(.+)\`` see same head @
+                : re `referent\(.+\)` see same head @
                   http://reluk.ca/project/Breccia/language_definition.brec
-            if( `t` is a patch, or descends from a patch )
-                throw+ invalid referent: patch or patch descendant
+            if( `t` is a patch, or lies within a patch )
+                throw+ invalid referent: patch or patch constituent
 
 
 
@@ -56,14 +56,14 @@ Waybrec language definition
             + Set `p` to `indicated fractum( fractum indicant of containment clause of rB )`
             if( the body of `p` comprises a body reference `rrB` )
                 return+ `referent parent( rrB )`
-                    / Here compilers should detect and avoid an infinite reference loop.
-            warn of ignored body references(+ `p` )
+                    / Here compilers should detect and avoid any infinite reference loop.
+            + `warn of ignored body references( p )`
             return+ `p`
 
         warn of ignored body references( fractum `f`, whose body comprises other than a body reference )
             : join `^^simulacral reference$` @ `^^ Note$`
             for( each child of `f` that is a body reference )
-                warn+ Body reference ignored: it is not the sole child
+                + Warn ‘Body reference ignored: it is not the sole child.’
 
 
 
@@ -79,8 +79,9 @@ Waybrec language definition
             - A waycaster may substitute a jointer for a pointer wherever he wants this effect.
                 / E.g. for purposes of patching.
         compile( jointer )
-            compile(+ jointer )
-                : see @ `^^ Jointer$` @ http://reluk.ca/project/Breccia/language_definition.brec
+            + `compile( jointer )`
+                : re `\`(.+)\`` see same head @ `^^ Jointer$` @
+                  http://reluk.ca/project/Breccia/language_definition.brec
             deem+ `sub` the fractum thereby subjoined
             - Each child of `sub` gains for a parent each parent of the jointer
               that does not duplicate a pre-existing parent.
@@ -150,7 +151,7 @@ Waybrec language definition
                 + Set `fB` to `referent parent( rB )`.
             else
                 + Set `fB` to `p`.
-                warn of ignored body references(+ `fB` )
+                + `warn of ignored body references( fB )`
             switch( `d` )
                 case( ‘before’ )
                     if( `fB` is bodiless )
