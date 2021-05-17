@@ -191,20 +191,17 @@ Waybrec language definition
                     │                              │
                     │  ┌──╴‘non-fractal’╶──┐       │
               ╶──┬──┴──┤                   ├── P ──┴──┬── URI reference ────▶
-                 │     └───╴‘unsubsumed’╶──┘          │
+                 │     └───╴‘uninterned’╶──┘          │
                  │                                    │
                  └────────────────────────────────────┘
                     : re `URI reference` see https://tools.ietf.org/html/rfc3986#section-4.1
                 diagram, The form of a resource indicant.
 
-            / Here Waybrec introduces the `unsubsumed` qualifier.
-        - The `unsubsumed` qualifier, where present on a resource indicant of an associative reference,
-          stops any subsumption that otherwise would have occured on account of that reference.
-            : re `any subsumption that would occur`
-              see `^^if\( .+ present and without an \`unsubsumed\` qualifier \)$` @
-              `^^for\( each associative reference` @ `Compile$` @
-              http://reluk.ca/project/wayic/model/form_and_compilation.brec
-            - Outside of an associative reference, the `unsubsumed` qualifier has no effect.
+            / Here Waybrec introduces the `uninterned` qualifier.
+        - The `uninterned` qualifier, where present on a resource indicant of an associative reference,
+          stops any internment of the reference, and any subsumption that otherwise would have
+          occured on account of the reference.
+            - Outside of an associative reference, the `uninterned` qualifier has no effect.
 
 
 
