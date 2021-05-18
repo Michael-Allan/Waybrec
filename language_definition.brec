@@ -122,8 +122,7 @@ Waybrec language definition
 
         - The fractum indicant of a patch indicates its application target.
             : re `application` see `^^apply\( patch \)$`
-            - Targets within files of the way model alone are valid.
-                / The intent of this rule is to avoid an accumulation of pointless, obsolete patches.
+            - Patches whose targets fall within the way model alone are applied.
         - The target of a switch patch is an insertion or substitution patch to be switched on or off.
             - The targeted patch must be declared within a waycast of the way model (a waycast with at
               least one file in the model) and its own target must lie within a file of the way model.
@@ -132,8 +131,8 @@ Waybrec language definition
           the content to be inserted or substituted into the way model at the target.
             / For this purpose a body reference may be used, e.g. referring to the body of another patch,
               in order to (re)apply the same content to a different target.
-            - URI references within a patch body are formed as usual, and rebased to the target file
-              (or files) only at time of application.
+            - Any relative paths within a patch body are converted to URI form during application.
+                : re `URI form` see https://tools.ietf.org/html/rfc3986#section-3
             - Patch bodies as such are not compiled; rather the patches are applied to the way model,
               then the patched way model is compiled.
             - A bodiless substitution patch effects a deletion.
@@ -159,16 +158,18 @@ Waybrec language definition
                     if( `t` is a file fractum )
                         throw+ Attempt to introduce a sibling to a file fractum
                     for( each child `c` of `fB` in linear order )
-                        + Insert as the sibling predecessor of `t` a copy of `c`,
-                          and rebase accordingly any URI references it contains.
+                        + Insert in the model as the sibling predecessor of `t` a copy of `c`,
+                          and convert to URI form any relative paths it contains.
+                            : re `URI form` see https://tools.ietf.org/html/rfc3986#section-3
                 case( ‘after’ )
                     if( `fB` is bodiless )
                         throw+ Bodiless insertion patch
                     if( `t` is a file fractum )
                         throw+ Attempt to introduce a sibling to a file fractum
                     for( each child `c` of `fB` in reverse linear order )
-                        + Insert as the sibling successor of `t` a copy of `c`,
-                          and rebase accordingly any URI references it contains.
+                        + Insert in the model as the sibling successor of `t` a copy of `c`,
+                          and convert to URI form any relative paths it contains.
+                            : re `URI form` see https://tools.ietf.org/html/rfc3986#section-3
                 case( ‘over’ )
                     if( `t` is a patch )
                         throw+ Attempt to patch a patch
@@ -176,9 +177,10 @@ Waybrec language definition
                         throw+ Attempt to introduce sibling file fracta
                     if( `fB` has a body )
                         for( each child `c` of `fB` in linear order )
-                            + Insert as the sibling predecessor of `t` a copy of `c`,
-                              and rebase accordingly any URI references it contains.
-                    + Delete `t`.
+                            + Insert in the model as the sibling predecessor of `t` a copy of `c`,
+                              and convert to URI form any relative paths it contains.
+                                : re `URI form` see https://tools.ietf.org/html/rfc3986#section-3
+                    + Delete from the model `t`.
 
 
 
