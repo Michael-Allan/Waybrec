@@ -101,14 +101,15 @@ Waybrec language definition
              
                                  ┌───╴‘on’╶───┐
                                  │            │
-                                 ├───╴‘off’╶──┤
-              ╶──╴‘patch’╶── S ──┤            ├── P ── fractum indicant ───▶
+                                 ├───╴‘off’╶──┤        remote fractum
+              ╶──╴‘patch’╶── S ──┤            ├── P ──╴   indicant   ╶───▶
                                  ├─╴‘before’╶─┤
                                  │            │
                                  ├──╴‘after’╶─┤
                                  │            │
                                  └──╴‘over’╶──┘
 
+                : re `(remote fractum)\R.*(indicant)` see `^^ Remote fractum indicant$`
         - No patch may descend, whether directly or by body reference, from a patch.
         - No patch nor descendant of a patch is considered to be on-way.
             : see `^^- Patch bodies as such are not compiled` @ `^^ Patch$`
@@ -120,12 +121,12 @@ Waybrec language definition
               before, after  insertion
               over           substitution
 
-        - The fractum indicant of a patch indicates its application target.
+        - The remote fractum indicant of a patch indicates its application target.
             : re `application` see `^^apply\( patch \)$`
+            - The target must lie in a waycast remote from that in which the patch was declared.
+                - The canonical locations of the two waycasts must differ.
             - Patches whose targets fall within the way model alone are applied.
         - The target of a switch patch is an insertion or substitution patch to be switched on or off.
-            - The targeted patch must be declared within a waycast of the way model (a waycast with at
-              least one file in the model) and its own target must lie within a file of the way model.
             - All switch patches are bodiless.
         - The body of an insertion or substitution patch defines, either directly or by body reference,
           the content to be inserted or substituted into the way model at the target.
@@ -137,11 +138,14 @@ Waybrec language definition
               then the patched way model is compiled.
             - A bodiless substitution patch effects a deletion.
 
-        apply( insertion or substitution patch `p` )
+        apply( insertion or substitution patch `p`, subsumed file path `f` )
             : join `^^simulacral reference$` @ `^^ Note$`
+            / The caller must ensure that `f` originates in a waycast whose canonical location
+              differs from that in which the patch was declared.
             deem+ `d` a directive, that of `p`;
-                  `iF` a fractum indicant, that of `p`;
-                  `t` a target, that of `indicated fractum( iF )`
+                  `iRF` a remote fractum indicant, that of `p`;
+                  `t` a target, that of `indicated fractum( iRF, f )`
+                : re `indicated fractum` see `^^indicated fractum\( remote fractum indicant`
             if( `t` is a patch descendant )
                 throw+ Attempt to patch a patch
                     / One may patch the application of a patch, but not the patch itself.
@@ -181,6 +185,31 @@ Waybrec language definition
                               and convert to URI form any relative paths it contains.
                                 : re `URI form` see https://tools.ietf.org/html/rfc3986#section-3
                     + Delete from the model `t`.
+
+
+
+    ━━━━━━━━━━━━━━━━━━━━━━━━━
+     Remote fractum indicant
+    ─────────────────────────
+        - A fractum indicant in this form:
+
+                 ┌───────────────────────────────────────┐
+              ╶──┤                                       │
+                 └──┬──╴‘`’╶── pattern ──╴‘`’╶──┬── CS ──┴── URI ────▶
+                    │                           │
+                    └─────────────╴◀── CS ──────┘
+
+                : re `pattern` see `^^ Pattern matching$` @
+                  http://reluk.ca/project/Breccia/language_definition.brec
+                : re `URI` see https://tools.ietf.org/html/rfc3986#section-3
+
+        indicated fractum( remote fractum indicant `iRF`, subsumed file path `f` )
+            : join `^^simulacral reference$` @ `^^ Note$`
+            deem+ `iF` a fractum indicant equal in content to `iRF`
+            + Set the resource indicant of `iF` to `f`.
+            return+ `indicated fractum( iF )`
+                : see `^^indicated fractum\( fractum indicant` @ `^^ Fractum indicant$` @
+                  http://reluk.ca/project/Breccia/language_definition.brec
 
 
 
