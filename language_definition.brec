@@ -140,6 +140,8 @@ Waybrec language definition
 
         apply( insertion or substitution patch `p`, subsumed file path `f` )
             : join `^^simulacral reference$` @ `^^ Note$`
+            : see also `^^ Patch application$` @
+              http://reluk.ca/project/wayic/model/form_and_compilation.brec
             / The caller must ensure that `f` originates in a waycast whose canonical location
               differs from that in which the patch was declared.
             deem+ `d` a directive, that of `p`;
