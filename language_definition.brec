@@ -109,7 +109,8 @@ Waybrec language definition
                                  │            │
                                  └──╴‘over’╶──┘
 
-                : re `(remote fractum)\R.*(indicant)` see `^^ Remote fractum indicant$`
+                : re `(fractum)\R.*(indicant)` see `^^ Fractum indicant$` @
+                  http://reluk.ca/project/Breccia/language_definition.brec
         - No patch may descend, whether directly or by body reference, from a patch.
         - No patch nor descendant of a patch is considered to be on-way.
             : see `^^- Patch bodies as such are not compiled` @ `^^ Patch$`
@@ -123,7 +124,8 @@ Waybrec language definition
 
         - The remote fractum indicant of a patch indicates its application target.
             : re `application` see `^^apply\( patch \)$`
-            - The target must lie in a waycast remote from that in which the patch was declared.
+            - It must not contain a `non-fractal` qualifier.
+            - The indicated target must lie in a waycast remote from that in which the patch is declared.
                 - The canonical locations of the two waycasts must differ.
             - Patches whose targets fall within the way model alone are applied.
         - The target of a switch patch is an insertion or substitution patch to be switched on or off.
@@ -145,9 +147,12 @@ Waybrec language definition
             / The caller must ensure that `f` originates in a waycast whose canonical location
               differs from that in which the patch was declared.
             deem+ `d` a directive, that of `p`;
-                  `iRF` a remote fractum indicant, that of `p`;
-                  `t` a target, that of `indicated fractum( iRF, f )`
-                : re `indicated fractum` see `^^indicated fractum\( remote fractum indicant`
+                  `iF` a fractum indicant, equal in content to the remote fractum indicant of `p`;
+                  `t` a target
+            + Set the resource indicant of `iF` to `f`.
+            + Set `t` to `indicated fractum( iF )`.
+                : see `^^indicated fractum\( fractum indicant` @ `^^ Fractum indicant$` @
+                  http://reluk.ca/project/Breccia/language_definition.brec
             if( `t` is a patch descendant )
                 throw+ Attempt to patch a patch
                     / One may patch the application of a patch, but not the patch itself.
@@ -187,31 +192,6 @@ Waybrec language definition
                               and convert to URI form any relative paths it contains.
                                 : re `URI form` see https://tools.ietf.org/html/rfc3986#section-3
                     + Delete from the model `t`.
-
-
-
-    ━━━━━━━━━━━━━━━━━━━━━━━━━
-     Remote fractum indicant
-    ─────────────────────────
-        - A fractum indicant in this form:
-
-                 ┌───────────────────────────────────────┐
-              ╶──┤                                       │
-                 └──┬──╴‘`’╶── pattern ──╴‘`’╶──┬── CS ──┴── URI ────▶
-                    │                           │
-                    └─────────────╴◀── CS ──────┘
-
-                : re `pattern` see `^^ Pattern matching$` @
-                  http://reluk.ca/project/Breccia/language_definition.brec
-                : re `URI` see https://tools.ietf.org/html/rfc3986#section-3
-
-        indicated fractum( remote fractum indicant `iRF`, subsumed file path `f` )
-            : join `^^simulacral reference$` @ `^^ Note$`
-            deem+ `iF` a fractum indicant equal in content to `iRF`
-            + Set the resource indicant of `iF` to `f`.
-            return+ `indicated fractum( iF )`
-                : see `^^indicated fractum\( fractum indicant` @ `^^ Fractum indicant$` @
-                  http://reluk.ca/project/Breccia/language_definition.brec
 
 
 
