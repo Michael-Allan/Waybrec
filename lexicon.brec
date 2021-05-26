@@ -2,10 +2,6 @@ Definition of terms for project Waybrec
 
     : see also http://reluk.ca/project/wayic/refractory/index.brec
 
-    remote
-        ─ adjective
-            - (of referential markup) Containing a URI, thereby indicating a remote referent.
-                : re `URI` see https://tools.ietf.org/html/rfc3986#section-3
     Waybrec
         ─ mass noun
             - A lightweight markup language, an extension of Breccia specialized for the purpose
