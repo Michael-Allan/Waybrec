@@ -8,6 +8,7 @@ Waybrec language definition
         ╷ command point
         ╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
             ◆ thoroughfractum designator
+            ◆ waycast parameterizer
 
 
 
@@ -31,6 +32,42 @@ Waybrec language definition
         - Its command has this form:
 
               ╶──╴‘thoroughfractum’╶───▶
+
+
+
+    ━━━━━━━━━━━━━━━━━━━━━━━
+     Waycast parameterizer
+    ───────────────────────
+        / A type of command point.
+        - It sets a waycast parameter.
+        - Its command has this form:
+
+                                    waycast parameter
+                              ┌───────────────────────────┐
+             
+              ╶──╴‘set’╶── P ── type ──┬── P ──  value ──┬───▶
+                                name   │                 │
+                                       └─────────────────┘
+
+                diagram, The form of the command in a waycast parameterizer.
+
+        - Waybrec defines only the form common to all types of waycast parameter.
+          The form particular to each type (type name, presence and form of value)
+          must be defined by whatever tool, component or subsystem depends on it.
+
+        type name
+
+              ╶── term ───▶
+
+        value
+
+                 ┌──────────╴◀─────── P ───────────┐
+                 │                                 │
+                 │  ┌────────── term ───────────┐  │
+              ╶──┴──┤                           ├──┴───▶
+                    └──╴‘`’╶── pattern ──╴‘`’╶──┘
+
+            / Patterns are to be parsed by default, that is.
 
 
 
