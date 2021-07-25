@@ -2,6 +2,8 @@ Definition of terms for project Waybrec
 
     : see also http://reluk.ca/project/wayic/refractory/index.brec
 
+    parametric subsystem
+        - A subsystem that defines a waycast parameter.
     Waybrec
         ─ mass noun
             - A lightweight markup language, an extension of Breccia specialized for the purpose
