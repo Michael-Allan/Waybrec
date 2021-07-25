@@ -42,18 +42,25 @@ Waybrec language definition
         - It sets a waycast parameter.
         - Its command has this form:
 
-                                      waycast parameter
-                              ╭┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄╮
+                                        waycast parameter
+                              ╭┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄╮
              
-              ╶──╴‘set’╶── P ── parameter ──┬── P ── value ──┬───▶
-                                typifier    │                │
-                                            └────────────────┘
+                                parameter            parameter
+              ╶──╴‘set’╶── P ──╴ typifier ──┬── P ──╴  value  ╶──┬───▶
+                                            │                    │
+                                            └────────────────────┘
 
                 diagram, The form of the command in a waycast parameterizer.
 
         - Waybrec defines the form common to all types of waycast parameter.
           The form particular to each type (type name, presence and form of value)
-          must be defined by whatever tool, component or subsystem depends on it.
+          must be defined by its parametric subsystem.
+        - Within a parameterizer body:
+            - No parameterizer has effect by default.
+                / It is ignored unless the parametric subsystem explicitly allows for its occurance
+                  in a parameterizer body.
+            - Where parameterizers do have effect:
+                - Sibling parameterizers of the same type are disallowed by default.
 
         parameter typifier
 
