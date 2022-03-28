@@ -57,7 +57,7 @@ Waybrec language definition
           must be defined by its parametric subsystem.
         - Within a parameterizer body:
             - No parameterizer has effect by default.
-                / It is ignored unless the parametric subsystem explicitly allows for its occurance
+                / It is ignored unless the parametric subsystem explicitly allows for its occurence
                   in a parameterizer body.
             - Where parameterizers do have effect:
                 - Sibling parameterizers of the same type are disallowed by default.
@@ -73,13 +73,13 @@ Waybrec language definition
 
         parameter value
 
-                 ┌──────────╴◀─────── P ───────────┐
-                 │                                 │
-                 │  ┌────────── term ───────────┐  │
-              ╶──┴──┤                           ├──┴───▶
-                    └──╴‘`’╶── pattern ──╴‘`’╶──┘
+                 ┌──────────────╴◀─────── P ───────────────┐
+                 │                                         │
+                 │  ┌────────────── term ───────────────┐  │
+              ╶──┴──┤                                   ├──┴───▶
+                    └──╴‘`’╶── pattern matcher ──╴‘`’╶──┘
 
-            / Patterns are to be parsed by default, that is.
+            / Pattern matchers are to be parsed by default, that is.
 
 
 
@@ -92,4 +92,4 @@ Waybrec language definition
 
 
 
-                                                    \ Copyright © 2019-2021  Michael Allan.  Licence MIT.
+                                                    \ Copyright © 2019-2022  Michael Allan.  Licence MIT.
