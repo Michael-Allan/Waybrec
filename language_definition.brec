@@ -57,7 +57,7 @@ Waybrec language definition
           must be defined by its parametric subsystem.
         - Within a parameterizer body:
             - No parameterizer has effect by default.
-                / It is ignored unless the parametric subsystem explicitly allows for its occurence
+                / It is ignored unless the parametric subsystem explicitly allows for its occurrence
                   in a parameterizer body.
             - Where parameterizers do have effect:
                 - Sibling parameterizers of the same type are disallowed by default.
