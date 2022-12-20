@@ -17,7 +17,7 @@ Waybrec language definition
     ─────────
         : see also @ http://reluk.ca/project/Breccia/language_definition.brec
         - With a fractal referent, a jointer brings the referent on-way.
-            : re `fractal referent` cf. `^^non-fractal$` @
+            : re `fractal referent` cf. `^*non-fractal$` @
               http://reluk.ca/project/way/index.brec
             / A pointer has no such effect.
 
