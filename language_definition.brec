@@ -27,7 +27,7 @@ Waybrec language definition
      Thoroughfractum designator
     ────────────────────────────
         / A type of command point.
-        - It marks its simulacral parent as a thoroughfractum, thereby defining the surjoint apex
+        - It marks its parent as a thoroughfractum, thereby defining the surjoint apex
           from which the way model depends.
         - Its command has this form:
 
