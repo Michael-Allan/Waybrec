@@ -3,7 +3,8 @@ Waybrec language definition
     - Waybrec is an extension of Breccia.
     - This file defines the extensions.
     - Novel fractal types introduced by Waybrec:
-        : re `fractal types` see also @ http://reluk.ca/project/Breccia/language_definition.brec
+        : re `fractal types` see also `^^${same}$`i @
+          http://reluk.ca/project/Breccia/language_definition.brec
 
         ╷ command point
         ╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
