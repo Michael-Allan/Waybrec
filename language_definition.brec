@@ -26,10 +26,9 @@ Waybrec language definition
     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      Thoroughfractum designator
     ────────────────────────────
-        / A type of command point.
-        - It marks its parent as a thoroughfractum, thereby defining the surjoint apex
-          from which the way model depends.
-        - Its command has this form:
+        - A thoroughfractum designator marks its parent as a thoroughfractum,
+          thereby defining the surjoint apex from which the way model depends.
+        - A type of command point, its command has this form:
 
               ╶──╴‘thoroughfractum’╶───▶
 
@@ -38,9 +37,8 @@ Waybrec language definition
     ━━━━━━━━━━━━━━━━━━━━━━━
      Waycast parameterizer
     ───────────────────────
-        / A type of command point.
-        - It sets a waycast parameter.
-        - Its command has this form:
+        - A waycast parameterizer sets a waycast parameter.
+        - It is a type of command point, and its command has this form:
 
                                         waycast parameter
                               ╭┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄╮
@@ -92,4 +90,4 @@ Waybrec language definition
 
 
 
-                                                    \ Copyright © 2019-2022  Michael Allan.  Licence MIT.
+                                              \ Copyright © 2019-2022, 2024  Michael Allan.  Licence MIT.
